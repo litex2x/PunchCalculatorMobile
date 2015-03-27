@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PunchCalculatorApp.View.CalculatorView">
+  <StackLayout>
+    <Label Text="Punch in:"></Label>
+    <TimePicker Time="{Binding PunchIn}"></TimePicker>
+    <Label Text="Lunch out:"></Label>
+    <TimePicker Time="{Binding LunchOut}"></TimePicker>
+    <Label Text="Lunch in:"></Label>
+    <TimePicker Time="{Binding LunchIn}"></TimePicker>
+    <Label Text="Total Minutes:"></Label>
+    <Entry Text="{Binding TargetTotalMinutes}"></Entry>
+    <Label Text="Override restrictions:"></Label>
+    <Switch IsToggled="{Binding IsOverridden}"></Switch>
+    <Button Command="{Binding CalculateCommand}" Text="Calculate"></Button>
+    <Label Text="{Binding Result}"></Label>
+  </StackLayout>
+</ContentPage>
